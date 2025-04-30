@@ -5,7 +5,7 @@ const db = new PGlite('idb://patients-db');
 // Initialize the table
 await db.exec(`
   CREATE TABLE IF NOT EXISTS patients (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     age INTEGER,
     gender TEXT,
