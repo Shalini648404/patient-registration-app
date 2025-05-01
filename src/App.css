@@ -1,38 +1,124 @@
-.App {
+.app-container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+
+.app-container.light {
+  background-color: #f2f7ff;
+  color: #222;
+}
+
+.app-container.dark {
+  background-color: #1c1c2b;
+  color: #eee;
+}
+
+/*.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+*/
+
+.app-header h1 {
+  color: inherit;
+}
+
+/*.toggle-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: inherit;
+}*/
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+/*
+
+.main-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 1.8rem;
+  }
+}*/
+
+.app-header {
+  position: relative;
+  text-align: center;
+  padding: 2rem 3rem 2rem 1rem; /* extra right padding for button */
+  margin-bottom: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toggle-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  margin: 0;
+  color: inherit;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Medium and down: reduce font and adjust toggle */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 1.8rem;
+    padding-right: 2.5rem; /* space for toggle button */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .toggle-btn {
+    font-size: 1.4rem;
+    right: 1rem;
+    top: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+  .app-header {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+
+}
+
+/* Extra small: adjust spacing further */
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 1.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .toggle-btn {
+    font-size: 1.3rem;
+    right: 0.8rem;
+    top: 0.5rem;
+  }
+
+  .app-header {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
   }
 }
