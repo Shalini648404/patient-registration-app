@@ -1,4 +1,4 @@
-.form-wrapper {
+/*.form-wrapper {
     background: #f5f9ff;
     padding: 30px;
     border-radius: 16px;
@@ -56,5 +56,152 @@
     color: #007c47;
     text-align: center;
     font-weight: 500;
+  }
+  */
+
+  .form-wrapper {
+    background: #f5f9ff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  
+  .form-wrapper h2 {
+    text-align: center;
+    color: #2a2a72;
+    margin-bottom: 20px;
+  }
+  
+  .patient-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .patient-form input {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+ 
+  
+  .patient-form input:focus {
+    outline: none;
+    border-color: #2a2a72;
+    box-shadow: 0 0 5px #9ab6ff;
+  }
+  
+  .submit-btn {
+    background-color: #2a2a72;
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1f1f5c;
+  }
+  
+  .success-msg {
+    margin-top: 20px;
+    background-color: #e0ffe0;
+    padding: 10px;
+    border-radius: 8px;
+    color: #007c47;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .patient-form select {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
+  .patient-form select:focus {
+    outline: none;
+    border-color: #2a2a72;
+    box-shadow: 0 0 5px #9ab6ff;
+  }
+
+  .patient-form select:invalid {
+    color: #777; /* Same as input placeholder color */
+  }
+
+ 
+  .phone-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .phone-group select {
+    width: 100px; /* Fixed width for country code */
+  }
+  
+  .phone-group input {
+    flex: 1; /* Take remaining space */
+  }
+
+  @media (max-width: 500px) {
+    .phone-group {
+      flex-direction: row;
+    }
+  
+    .phone-group select{
+        width: 30%;
+    }
+    .phone-group input {
+      width: 70%;
+    }
+  }
+    
+  select {
+      -webkit-appearance: none;  /* For Safari */
+      -moz-appearance: none;     /* For Firefox */
+      appearance: none;
+  }
+
+  /*custom arrow*/
+  .custom-select-wrapper {
+    position: relative;
+    width: 100%; /* or match with your input width */
+  }
+  
+  .custom-select-wrapper select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    color: #777;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Custom arrow style */
+  .custom-select-wrapper .custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 16px;
+    color: #777;
   }
   
